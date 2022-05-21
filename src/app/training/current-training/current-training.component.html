@@ -1,1 +1,9 @@
-<p>current-training works!</p>
+<section class="grid-container">
+  <mat-spinner mode="determinate" [value]="progress"></mat-spinner>
+  <h1>{{progress}} %</h1>
+  <p>Keep on going</p>
+  <button
+    mat-raised-button
+    color="warn"
+    (click)="onStop()">Stop</button>
+</section>

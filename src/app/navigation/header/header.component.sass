@@ -1,0 +1,24 @@
+a
+  text-decoration: none
+  color: white
+  &:hover, &:active
+    color: lightgrey
+ul
+  list-style-type: none
+.menu
+  display: block
+.navigation
+  display: none
+.gap
+  width: 100%
+.grid-container
+  display: grid
+  grid-auto-flow: column
+  grid-gap: 1rem
+
+// wide screen
+@media screen and (min-width: 768px)
+  .navigation
+    display: block
+  .menu
+    display: none

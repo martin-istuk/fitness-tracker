@@ -1,1 +1,31 @@
-<p>new-training works!</p>
+<section class="new-training">
+  <mat-card class="training-card">
+    <mat-card-title>Time to star a workout</mat-card-title>
+    <mat-card-content>
+      <mat-form-field appearance="standard">
+        <mat-label>Select workout</mat-label>
+         <mat-select>
+          <mat-option value="crunches">
+            Crunches
+          </mat-option>
+          <mat-option value="touch-toes">
+            Touch-toes
+          </mat-option>
+          <mat-option value="side-lunges">
+            Side-lunges
+          </mat-option>
+          <mat-option value="burpees">
+            Burpees
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        type="submit"
+        mat-raised-button
+        color="primary"
+        (click)="onStartTraining()">Start</button>
+    </mat-card-actions>
+  </mat-card>
+</section>

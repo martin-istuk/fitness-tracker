@@ -1,0 +1,13 @@
+.grid-container
+  display: grid
+  grid-auto-flow: row
+  grid-gap: 1rem
+  margin: auto
+  padding: 1rem
+  text-align: center
+
+// wide screen
+@media screen and (min-width: 768px)
+  .grid-container
+    grid-auto-flow: column
+    grid-gap: 3rem
