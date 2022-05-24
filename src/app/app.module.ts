@@ -43,7 +43,7 @@ import { StopTrainingComponent } from './training/current-training/stop-training
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  entryComponents: [StopTrainingComponent]
+  bootstrap: [ AppComponent ],
+  entryComponents: [ StopTrainingComponent ]
 })
 export class AppModule { }
