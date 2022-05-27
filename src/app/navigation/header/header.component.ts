@@ -12,18 +12,16 @@ import { AuthService } from 'src/app/auth/auth.service';
 export class HeaderComponent implements OnInit, OnDestroy {
   @Output() sidenavToggle = new EventEmitter<void>();
   isAuth = false;
-  authSub: Subscription;
+  authSubs: Subscription;
 
   constructor(
     private authService: AuthService
   ) {}
+
   ngOnInit() {
-    this.authSub = this.authService.authChange.subscribe(
+    this.authSubs = this.authService.authChange.subscribe(
       authStatus => { this.isAuth = authStatus }
     )
-  }
-  ngOnDestroy() {
-    this.authSub.unsubscribe()
   }
 
   onToggleSidenav() {
@@ -32,6 +30,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   onLogout() {
     this.authService.logout()
+  }
+  ngOnDestroy() {
+    this.authSubs.unsubscribe()
   }
 
 }
