@@ -3,7 +3,7 @@
     <mat-card class="training-card">
       <mat-card-title>Time to star a workout</mat-card-title>
       <mat-card-content>
-        <mat-form-field appearance="standard">
+        <mat-form-field appearance="standard" *ngIf="!loadingState && exercises">
           <mat-label>Select workout</mat-label>
            <mat-select ngModel name="exercise" required>
             <mat-option
@@ -13,14 +13,24 @@
             </mat-option>
           </mat-select>
         </mat-form-field>
+        <mat-spinner *ngIf="loadingState"></mat-spinner>
       </mat-card-content>
-      <mat-card-actions>
+      <mat-card-actions *ngIf="!loadingState">
         <button
+          *ngIf="exercises"
           type="submit"
           mat-raised-button
           color="primary"
           [disabled]="f.invalid">
           Start
+        </button>
+        <button
+          *ngIf="!exercises"
+          type="button"
+          mat-raised-button
+          color="primary"
+          (click)="fetchExercises()">
+          Fetch again
         </button>
       </mat-card-actions>
     </mat-card>

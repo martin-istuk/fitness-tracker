@@ -20,6 +20,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 var materialArray: Array<any> = [
   MatButtonModule,     MatIconModule,              MatFormFieldModule,
@@ -27,7 +28,8 @@ var materialArray: Array<any> = [
   MatCheckboxModule,   MatSidenavModule,           MatToolbarModule,
   MatListModule,       MatTabsModule,              MatCardModule,
   MatSelectModule,     MatProgressSpinnerModule,   MatDialogModule,
-  MatTableModule,      MatSortModule,              MatPaginatorModule
+  MatTableModule,      MatSortModule,              MatPaginatorModule,
+  MatSnackBarModule
 ]
 
 @NgModule( {
